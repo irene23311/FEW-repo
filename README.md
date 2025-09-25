@@ -1,4 +1,4 @@
-# Calendar Sketch (Wireframe)
+# Calendar Sketch (Week 3 homework)
 
 This repository contains the code for my **Calendar Sketch wireframe** project.
 
