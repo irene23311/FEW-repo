@@ -10,4 +10,3 @@ This repository contains the code for my **Calendar Sketch wireframe** project.
 View it here: [Live Page](https://irene23311.github.io/FEW-repo/)
 
 
-![Uploading image.png…]()
