@@ -7,6 +7,6 @@ This repository contains the code for my **Calendar Sketch wireframe** project.
 - **style.css** → CSS styling
 
 ### Live Demo
-View it here: [Live Page](https://irene23311.github.io/FEW-repo/week3/)
+View it here: [Live Page](https://irene23311.github.io/FEW-repo/)
 
 
