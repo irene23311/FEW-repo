@@ -1,0 +1,7 @@
+#mainDisplay {
+    background-color: rgb(110, 198, 228);
+    text-align: right;
+    padding: 50px; 
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+}
