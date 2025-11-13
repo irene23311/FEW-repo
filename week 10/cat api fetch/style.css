@@ -1,0 +1,30 @@
+/* style.css */
+#astronauts {
+  background-color: #101522;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#astronauts h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+#astronauts p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#astronauts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#astronauts li {
+  padding: 5px 0;
+  border-bottom: 1px solid #444;
+}
