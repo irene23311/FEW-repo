@@ -1,16 +1,22 @@
 function computeAndDisplay() {
+
     let a = parseInt(value1.value);
     let b = parseInt(value2.value);
+    value2.style.borderColor = "black";
+    value1.style.borderColor = "black";
 
-    console.log("Value of a: ", a);
-
-    if (a == 0) {
-        alert("Value 1 cannot be zero");
-    } else if (isNaN(a)) {
-        alert("Please enter a valid number");
+    if (isNaN(a)) {
+        value1.style.borderColor = "red";
+    } else if (isNaN(b)) {
+        value2.style.borderColor = "red";
+    } else {
+        if(operationSelection.value == "Add"){
+            results.textContent = a + b;
+                } else if(operationSelection.value == "Substract")
+        {
+            results.textContent = a - b;
+        }
     }
-    let c = a + b;
-    result.innerText = c;
 }
 
 computeButton.onclick = computeAndDisplay;

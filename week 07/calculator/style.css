@@ -21,8 +21,11 @@ body {
     font-size: 16px;
 }
 
-#result {
+#results {
     padding: 1rem;
     background-color: antiquewhite;
     min-height: 1rem;
+}
+input {
+    border: solid 2px black;
 }

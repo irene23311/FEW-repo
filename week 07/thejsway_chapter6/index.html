@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<script>
+// Mini Object World — Step 1 (base logic)
+
+// 1) The world container
+const world = {
+  // --- Hero: Aurora ---
+  aurora: {
+    name: "Aurora",
+    health: 150,
+    strength: 25,
+    xp: 0,
+    describe() {
+      return `${this.name} 🌟 | HP: ${this.health} | STR: ${this.strength} | XP: ${this.xp}`;
+    }
+  },
+
+  // --- Pet: Dog ---
+  dog: {
+    name: "Mocha",
+    species: "Shiba Inu",
+    size: "medium",
+    bark() {
+      return "WOOF!";
+    }
+  },
+
+  // --- Shape: Circle ---
+  circle: {
+    radius: 50, // default; you can change it with setRadius()
+    setRadius(r) {
+      this.radius = Number(r);
+      return `Radius set to ${this.radius}`;
+    },
+    circumference() {
+      return 2 * Math.PI * this.radius;
+    },
+    area() {
+      return Math.PI * this.radius ** 2;
+    }
+  },
+
+  // --- Bank: Account ---
+  account: {
+    name: "Alex",
+    balance: 0,
+    credit(amount) {
+      this.balance += Number(amount);
+      return this.balance;
+    },
+    describe() {
+      return `${this.name}'s account balance: $${this.balance}`;
+    }
+  },
+
+  // --- Entry point: guide for the player ---
+  explore() {
+    console.log("🌍 Welcome to the Mini Object World!");
+    console.log("You can visit: world.aurora, world.dog, world.circle, world.account");
+    console.log("Try:");
+    console.log("  world.aurora.describe()");
+    console.log("  world.dog.bark()");
+    console.log("  world.circle.setRadius(80); world.circle.area()");
+    console.log("  world.account.describe(); world.account.credit(250); world.account.describe()");
+  }
+};
+
+// Kick things off
+world.explore();
+
+</script>
+
+
+<body>
+    
+</body>
+</html>
