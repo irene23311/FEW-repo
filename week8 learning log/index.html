@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Counting Elements Exercise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #first-container, #second-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .results {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px dashed #666;
+    }
+    button {
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML Element Counting Exercise</h1>
+
+  <!-- First container with an ID -->
+  <div id="first-container">
+    <h2>First Container</h2>
+    <p>Paragraph 1 inside first container.</p>
+    <p>Paragraph 2 inside first container.</p>
+    <p>Paragraph 3 inside first container.</p>
+  </div>
+
+  <!-- Second container with an ID -->
+  <div id="second-container">
+    <h2>Second Container</h2>
+    <p>Paragraph 4 inside second container.</p>
+    <p>Paragraph 5 inside second container.</p>
+    <p>Paragraph 6 inside second container.</p>
+  </div>
+
+  <!-- Paragraphs outside any container (still count toward total 10) -->
+  <p>Paragraph 7 outside containers.</p>
+  <p>Paragraph 8 outside containers.</p>
+  <p>Paragraph 9 outside containers.</p>
+  <p>Paragraph 10 outside containers.</p>
+
+  <!-- Buttons that trigger functions on click -->
+  <div>
+    <button onclick="countParagraphs()">Count all &lt;p&gt; elements</button>
+    <button onclick="countInsideFirst()">Count elements inside first ID</button>
+    <button onclick="countInsideSecond()">Count elements inside second ID</button>
+  </div>
+
+  <!-- Empty divs to show results -->
+  <div id="result-all" class="results"></div>
+  <div id="result-first" class="results"></div>
+  <div id="result-second" class="results"></div>
+
+  <script>
+    // 1. How many of the same HTML elements are on the page (paragraphs in this example)
+    function countParagraphs() {
+      const paragraphs = document.getElementsByTagName("p");
+      const count = paragraphs.length;
+      const resultDiv = document.getElementById("result-all");
+      resultDiv.textContent = `There are ${count} paragraph (<p>) tags on this page.`;
+    }
+
+    // 2. How many elements are inside of your first ID
+    function countInsideFirst() {
+      const firstContainer = document.getElementById("first-container");
+      // querySelectorAll("*") selects all descendant elements
+      const elementsInside = firstContainer.querySelectorAll("*");
+      const count = elementsInside.length;
+      const resultDiv = document.getElementById("result-first");
+      resultDiv.textContent = `There are ${count} elements inside the element with ID "first-container".`;
+    }
+
+    // 3. How many elements are inside of your second ID
+    function countInsideSecond() {
+      const secondContainer = document.getElementById("second-container");
+      const elementsInside = secondContainer.querySelectorAll("*");
+      const count = elementsInside.length;
+      const resultDiv = document.getElementById("result-second");
+      resultDiv.textContent = `There are ${count} elements inside the element with ID "second-container".`;
+    }
+  </script>
+</body>
+</html>
