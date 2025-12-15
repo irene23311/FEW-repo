@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Playground</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    #box {
+      width: 150px;
+      height: 150px;
+      background: lightblue;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Interactive Playground</h1>
+
+  <p id="text">Try interacting!</p>
+
+  <input id="colorInput" placeholder="Type a color (red, blue...)" onchange="updateText()" />
+
+  <button onclick="changeColor()">Change Box Color</button>
+
+  <div id="box" onmouseover="growBox()" onmouseout="shrinkBox()"></div>
+
+  <script>
+    function changeColor() {
+      const color = document.getElementById("colorInput").value;
+      document.getElementById("box").style.backgroundColor = color;
+    }
+
+    function updateText() {
+      document.getElementById("text").textContent = "You changed the input!";
+    }
+
+    function growBox() {
+      document.getElementById("box").style.transform = "scale(1.2)";
+    }
+
+    function shrinkBox() {
+      document.getElementById("box").style.transform = "scale(1)";
+    }
+  </script>
+</body>
+</html>
